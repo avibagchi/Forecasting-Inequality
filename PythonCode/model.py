@@ -29,25 +29,25 @@ def RandomForests(array):
 
     y_pred = regressor.predict(X_test)
 
-    # df.to_csv ("testingdataFED4.csv")
+    df.to_csv ("testingdataFED4.csv")
 
-    # from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
+    from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
-    # print(confusion_matrix(y_test, y_pred))
-    # print(classification_report(y_test, y_pred))
-    # print(accuracy_score(y_test, y_pred))
+    print(confusion_matrix(y_test, y_pred))
+    print(classification_report(y_test, y_pred))
+    print(accuracy_score(y_test, y_pred))
 
-    # Feature importance
+    Feature importance
 
-    #from matplotlib import pyplot
+    from matplotlib import pyplot
 
-    #importance = regressor.feature_importances_
+    importance = regressor.feature_importances_
 
-    #for i, v in enumerate(importance):
-        #print('Feature: %0d, Score: %.5f' % (i, v))
+    for i, v in enumerate(importance):
+        print('Feature: %0d, Score: %.5f' % (i, v))
 
-    #pyplot.bar([x for x in range(len(importance))], importance)
-    #pyplot.show()
+    pyplot.bar([x for x in range(len(importance))], importance)
+    pyplot.show()
 
     # prediction
     pred = [
